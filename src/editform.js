@@ -18,7 +18,7 @@ const Editform = () =>{
     const {id} = useParams('id');
     const navigate = useNavigate();
     useEffect(()=>{
-        axios.get('http://localhost:5000/getstudentbyid/'+id)
+        axios.get('https://mern-crud-server-virid.vercel.app/getstudentbyid/'+id)
         .then((res)=>
         {console.log(res.data)
         setFormData(res.data.studentdata)
@@ -31,7 +31,7 @@ const Editform = () =>{
         e.preventDefault();
         console.log(formdata)
         
-        axios.post("http://localhost:5000/updatestudent/"+id,formdata)
+        axios.post("https://mern-crud-server-virid.vercel.app/updatestudent/"+id,formdata)
         .then((result)=>{
             alert(result.data.msg)
             

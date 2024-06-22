@@ -17,7 +17,7 @@ const Forms = () =>{
     const handleSubmit = (e) =>{
         e.preventDefault();
         // console.log(formData)
-        axios.post("http://localhost:5000/addstudent",{formData})
+        axios.post("https://mern-crud-server-virid.vercel.app/addstudent",{formData})
         .then((res)=>console.log(res.data))
         alert('Data Added Successfully!')
         navigate('/')
