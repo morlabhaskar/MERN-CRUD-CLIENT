@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Datalist() {
     const [students,setStudents] = useState([])
-    const api = 'https://mern-crud-server-virid.vercel.app/getstudent'
+    const api = 'https://mern-crud-server-nine.vercel.app/getstudent'
     useEffect(()=>{
         axios.get(api).then((response)=>
         setStudents(response.data.studentdata)
@@ -13,7 +13,7 @@ function Datalist() {
     });
     const DelHandler = (id) => {
         console.log(id)
-        axios.delete('https://mern-crud-server-virid.vercel.app/deleteuser/'+id)
+        axios.delete('https://mern-crud-server-nine.vercel.app/deleteuser/'+id)
         .then(response=>{
             console.log(response.data.msg)
             if(response.data.message === 'Successfully deleted'){   

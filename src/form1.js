@@ -12,7 +12,7 @@ const Form1 = () =>{
     const handleSubmit = (e) =>{
         e.preventDefault();
         console.log(formData)
-        axios.post("https://mern-crud-server-virid.vercel.app/addstud",{formData})
+        axios.post("https://mern-crud-server-nine.vercel.app/addstud",{formData})
         .then((res)=>console.log(res.data))
     }
     return(
